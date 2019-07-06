@@ -8,6 +8,8 @@
 
 body {
   margin: 0;
+  background-color: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1, h2, h3,
@@ -18,5 +20,448 @@ h4, h5, h6 {
 ul, p {
   margin: 0;
   padding: 0;
+}
+
+section {
+  margin: 40px auto;
+}
+
+a { text-decoration: none; }
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.right { float: right; }
+.left { float: left; }
+.gray { color: #555; }
+.orange { color: var(--orange); }
+.strike { 
+  text-decoration: line-through; 
+  font-size: 13px;
+  color: #555;
+}
+.black-gradient { 
+  background-image: linear-gradient(transparent, #000); 
+}
+
+/* variables */
+:root {
+  --orange: #f42;
+  --lightorange: #ffe8e4;
+}
+
+/* links */
+a { 
+  color: #555; 
+}
+.header-link { 
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--orange); 
+}
+.light-link { 
+  color: #aaa; 
+}
+.article-link {
+  font-weight: 700; 
+  color: #000; 
+}
+
+a:hover { color: #000; }
+.header-link:hover { color: #000; }
+.light-link:hover { color: #fff; }
+.article-link:hover { color: var(--orange); }
+
+.small {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+footer { height: 300px; }
+.hero { height: 500px; }
+
+/* headers */
+.section-header {
+  margin-bottom: 12px;
+  background-color: rgba(255,255,255,0.2);
+}
+
+.byline {
+  font-size: 13px;
+}
+
+.section-header ul {
+  margin-top: 12px;
+}
+
+.section-header li {
+  padding: 0 10px;
+  display: inline-block;
+  border-right: 1px solid var(--orange);
+}
+
+/* grid */
+.container {
+  padding: 12px 0;
+  display: grid;
+  grid-gap: 24px;
+}
+
+.wrapper { 
+  padding: 0 20px; 
+  margin: 0 auto;
+  max-width: 1150px;
+}
+
+/* header */
+.tnw-logo {
+  float: left;
+  height: 90px;
+  width: auto;
+  object-fit: cover;
+  margin-right: 8px;
+  display: none;
+}
+
+header {
+  padding: 8px;
+  background-color: #000;
+  font-size: 13px;
+}
+
+header li:first-child a {
+  color: #fff;
+}
+
+header li {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+/* sticky nav */
+.sticky-nav {
+  margin: 0 auto;
+  padding: 20px 16px;
+  height: 60px;
+  background-color: #fff;
+  color: #aaa;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.sticky-nav li {
+  display: inline-block;
+  margin-right: 16px;
+}
+
+/* hero */
+.hero {
+  padding: 4px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px;
+}
+.hero-lg {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.hero-sm {
+  position:relative;
+  color: #fff;
+}
+
+.hero-main {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+
+.hero-main-gradient {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(135deg, rgba(254, 35, 119, 0.8), rgba(0, 0, 0, 0.9));
+}
+
+.hero-main-details {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+.logo {
+  padding-left: 12px;
+  position: absolute;
+  font-size: 72px;
+  font-weight: 900;
+}
+
+.hero-date {
+  padding: 12px;
+  position: absolute;
+  right: 0;
+}
+
+.hero-title {
+  padding: 12px;
+  position: absolute;
+  bottom: 0;
+}
+
+.hero-title h1 {
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.hero-title .byline {
+  color: #aaa;
+}
+
+/* news */
+.news {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.news-item-img {
+  height: 135px;
+  overflow: hidden;
+}
+
+.news-item-title {
+  padding: 8px 0;
+}
+
+
+/* investments */
+.investments {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.invest-icon {
+  margin: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+.invest-group {
+  font-weight: 900;
+  background-color: var(--lightorange);
+}
+
+.invest-group h3 {
+  padding: 8px 0;
+  color: #fff;
+  background-color: var(--orange);
+}
+
+.invest-group p {
+  padding-top: 8px;
+  color: #000;
+}
+
+.invest-group span {
+  padding-bottom: 8px;
+  display: block;
+  color: #555;
+  font-weight: 400;
+}
+
+.invest-details {
+  font-size: 13px;
+}
+
+.invest-details ul {
+  padding: 8px 0;
+}
+
+.invest-details li {
+  margin: 8px 0;
+}
+
+.invest-details p {
+  padding: 8px 0;
+  line-height: 20px;
+  border-top: 1px solid #ff44224d;
+  font-size: 12px;
+}
+
+/* categories */
+.categories {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.categories-main {
+  position: relative;
+  color: #fff;
+  background-color: #000;
+  background-size: cover;
+  min-height: 240px;
+  max-height: 300px;
+}
+
+.categories-main-details {
+  position: absolute;
+  bottom: 0;
+  padding: 8px;
+  padding-top: 100px;
+}
+
+.categories-main-details h4 {
+  padding: 8px 0;
+  font-size: 18px;
+}
+
+.popular,
+.latest {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.categories-latest {
+  padding: 8px;
+  background-color: var(--lightorange);
+  color: var(--orange);
+  font-weight: 800;
+  height: 112px;
+  overflow: hidden;
+}
+
+.latest-img {
+  width: 96px;
+  height: 96px;
+}
+
+.latest {
+  margin-top: 20px;
+  margin-bottom: 4px;
+  font-weight: 400;
+}
+
+.categories-item ul {
+  list-style: none;
+}
+
+.categories-item li:before {
+  content: "\2022";
+  color: var(--orange);
+  display: inline-block;
+  width: 1em;
+}
+
+.categories-item li {
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* deals */
+.deals {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.deals-item {
+  height: 286px;
+}
+
+.deals-item p {
+  padding-top: 8px;
+  line-height: 18px;
+}
+
+.deals-img {
+  height: 75%;
+  background-color: var(--lightorange);
+}
+
+/* footer */
+footer {
+  padding-top: 40px;
+  position: relative;
+  background-color: #131313;
+  color: #ccc;
+}
+
+footer ul {
+  text-align: center;
+  margin: 30px;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.footer-links {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.footer-copyright {
+  position: absolute;
+  bottom: 0;
+  padding: 40px;
+  width: 100%;
+  background-color: #000;
+  text-align: center;
+}
+footer span {
+  height: 9px;
+  vertical-align: baseline;
+}
+
+
+@media screen and (max-width: 1000px) {
+         .news { grid-template-columns: repeat(3, 1fr); }
+  .investments { grid-template-columns: repeat(3, 1fr); }
+   .categories { grid-template-columns: 1fr 1fr; }
+  .investments-item:last-child { display: none; }
+  .hero-main-gradient { display: none; }
+  .logo { display: none; }
+  .tnw-logo { display: block; }
+  .hero { height: 400px; }
+}
+
+@media screen and (max-width: 750px) {
+  .hero { grid-template-columns: 1fr; }
+  .news { grid-template-columns: 1fr; }
+  .investments { grid-template-columns: 1fr; }
+  .categories { grid-template-columns: 1fr; }
+  .deals { grid-template-columns: 1fr; }
+  .hero-lg {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .hero-title h1 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .deals-img {
+    float: left;
+    width: 75px;
+    height: 75px;
+    margin-right: 8px;
+  }
+  .deals-item {
+    height: auto;
+  }
 }
 
